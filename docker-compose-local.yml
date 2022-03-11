@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: hepcar-customer-local
+      POSTGRES_PASSWORD: root
+      ports: "5436:5436"

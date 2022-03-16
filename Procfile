@@ -1,1 +1,1 @@
-web: java -Dspring.profiles.active=prod -jar build/libs/helpcar-customer.jar --server.port=$PORT
+web: java $JAVA_OPTS -jar -Dspring.profiles.active=prod build/libs/helpcar-customer.jar --port $PORT

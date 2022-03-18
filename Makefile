@@ -1,5 +1,7 @@
+COMPOSE_FILE = docker-compose -f
+
 start:
-	docker-compose -f docker-compose-local.yml up
+	$(COMPOSE_FILE) docker-compose-local.yml up
 
 stop:
-	docker-compose -f docker-compose-local.yml down
+	$(COMPOSE_FILE) docker-compose-local.yml down

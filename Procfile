@@ -1,0 +1,1 @@
+web: java $JAVA_OPTS -jar -Dspring.profiles.active=prod build/libs/helpcar-customer.jar --port $PORT

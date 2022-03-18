@@ -1,5 +1,16 @@
+COMPOSE_FILE = docker-compose -f
+GRADLE = ./gradlew
+
+# Start app
 start:
-	docker-compose -f docker-compose-local.yml up
+	$(COMPOSE_FILE) docker-compose-local.yml up
 
 stop:
-	docker-compose -f docker-compose-local.yml down
+	$(COMPOSE_FILE) docker-compose-local.yml down
+
+gradle.build:
+	$(GRADLE) clean build
+
+#Run all tests
+gradle.test:
+	$(GRADLE) test

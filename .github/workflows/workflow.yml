@@ -16,7 +16,6 @@ jobs:
         with:
           java-version: '11'
           distribution: 'adopt'
-          cache: 'gradle'
       - name: Run build gradle app
         run: ./gradlew clean build
       - name: Run all tests

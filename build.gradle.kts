@@ -6,7 +6,6 @@ val kotlinCoroutinesVersion: String by ext
 val jacksonVersion: String by ext
 val springBootStarterVersion: String by ext
 val mockkVersion: String by ext
-val pitestVersion: String by ext
 val pitestJunit5Version: String by ext
 
 java.sourceCompatibility = JavaVersion.VERSION_11
@@ -17,7 +16,18 @@ plugins {
 
 	id("org.springframework.boot") version "2.6.4" apply false
 	id("io.spring.dependency-management") version "1.0.11.RELEASE"
-	id("info.solidsoft.pitest") version "1.4.7"
+	id("info.solidsoft.pitest") version "1.7.4"
+}
+
+buildscript {
+	repositories {
+		mavenCentral()
+	}
+	configurations.maybeCreate("pitest")
+	dependencies {
+		classpath("info.solidsoft.gradle.pitest:gradle-pitest-plugin:1.7.4")
+		"pitest"("org.pitest:pitest-junit5-plugin:0.15")
+	}
 }
 
 allprojects {
@@ -56,10 +66,6 @@ subprojects {
 
 			// test
 			dependency("io.mockk:mockk:$mockkVersion")
-
-			// pitest
-			dependency("info.solidsoft.gradle.pitest:gradle-pitest-plugin:$pitestVersion")
-			dependency("org.pitest:pitest-junit5-plugin:$pitestJunit5Version")
 		}
 	}
 
@@ -73,10 +79,6 @@ subprojects {
 
 		// spring
 		implementation("org.springframework.boot:spring-boot-starter-web")
-
-		// pitest
-		implementation("info.solidsoft.gradle.pitest:gradle-pitest-plugin")
-		implementation("org.pitest:pitest-junit5-plugin")
 
 		// test
 		testImplementation("io.mockk:mockk")
@@ -94,9 +96,14 @@ subprojects {
 		}
 
 		pitest {
-			testPlugin.set("junit5")
+			if (project.name in setOf("helpcar-customer-api")) {
+				failWhenNoMutations.set(false)
+			}
+			junit5PluginVersion.set("0.15")
 			outputFormats.set(setOf("HTML"))
-			mutators.set(setOf("STRONGER", "DEFAULTS"))
+			exportLineCoverage.set(true)
+			targetClasses.set(setOf("*"))
+			targetTests.set(setOf("*"))
 		}
 
 		test {

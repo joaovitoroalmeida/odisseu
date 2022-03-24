@@ -19,17 +19,6 @@ plugins {
 	id("info.solidsoft.pitest") version "1.7.4"
 }
 
-buildscript {
-	repositories {
-		mavenCentral()
-	}
-	configurations.maybeCreate("pitest")
-	dependencies {
-		classpath("info.solidsoft.gradle.pitest:gradle-pitest-plugin:1.7.4")
-		"pitest"("org.pitest:pitest-junit5-plugin:0.15")
-	}
-}
-
 allprojects {
 	version = projectVersion
 	group = "com.helpcar.customer.api"
@@ -49,6 +38,17 @@ subprojects {
 		plugin("info.solidsoft.pitest")
 
 		plugin("idea")
+	}
+
+	buildscript {
+		repositories {
+			mavenCentral()
+		}
+		configurations.maybeCreate("pitest")
+		dependencies {
+			classpath("info.solidsoft.gradle.pitest:gradle-pitest-plugin:1.7.4")
+			"pitest"("org.pitest:pitest-junit5-plugin:0.15")
+		}
 	}
 
 	dependencyManagement {

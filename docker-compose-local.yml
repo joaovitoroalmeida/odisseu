@@ -18,5 +18,4 @@ services:
     environment:
       POSTGRES_USER: helpcar-customer-local
       POSTGRES_PASSWORD: helpcar-customer-local
-      ports:
-        - "5436:5436"
+      ports: "5436:5436"

@@ -9,13 +9,14 @@ services:
     depends_on:
       - db
     ports:
-      - "8082:8082"
+      - "8080:8080"
     environment:
       SPRING_PROFILES_ACTIVE: local
 
   db:
     image: postgres
     environment:
-      POSTGRES_USER: hepcar-customer-local
-      POSTGRES_PASSWORD: root
-      ports: "5436:5436"
+      POSTGRES_USER: helpcar-customer-local
+      POSTGRES_PASSWORD: helpcar-customer-local
+      ports:
+        - "5436:5436"

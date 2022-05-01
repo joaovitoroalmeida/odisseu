@@ -6,6 +6,7 @@ val kotlinCoroutinesVersion: String by ext
 val jacksonVersion: String by ext
 val springBootStarterVersion: String by ext
 val mockkVersion: String by ext
+val postgresConnectorVersion: String by ext
 
 java.sourceCompatibility = JavaVersion.VERSION_11
 
@@ -52,6 +53,9 @@ subprojects {
 
 			// test
 			dependency("io.mockk:mockk:$mockkVersion")
+
+			// db
+			dependency("org.postgresql:postgresql:$postgresConnectorVersion")
 		}
 	}
 

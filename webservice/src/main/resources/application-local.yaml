@@ -1,2 +1,6 @@
-server:
-  port: 8082
+#Spring Properties
+spring:
+  datasource:
+    url: jdbc:postgres://localhost:5436/hepcar-customer-local?schema=helpcar_customer
+    username: helpcar-customer-local
+    password: helpcar-customer-local

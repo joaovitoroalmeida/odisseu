@@ -1,0 +1,8 @@
+#Server Properties
+server:
+  port: 8080
+
+#Spring Properties
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver

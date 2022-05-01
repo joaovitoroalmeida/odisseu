@@ -8,6 +8,7 @@ val springBootStarterVersion: String by ext
 val mockkVersion: String by ext
 val postgresConnectorVersion: String by ext
 val micrometerVersion: String by ext
+val flywayVersion: String by ext
 
 java.sourceCompatibility = JavaVersion.VERSION_11
 
@@ -47,6 +48,7 @@ subprojects {
 		dependencies {
 			// spring
 			dependency("org.springframework.boot:spring-boot-starter-actuator:$springBootStarterVersion")
+			dependency("org.springframework.boot:spring-boot-starter-data-jpa:$springBootStarterVersion")
 
 			// kotlin
 			dependency("org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion")
@@ -60,6 +62,7 @@ subprojects {
 
 			// db
 			dependency("org.postgresql:postgresql:$postgresConnectorVersion")
+			dependency("org.flywaydb:flyway-core:$flywayVersion")
 
 			// dod
 			dependency("io.micrometer:micrometer-registry-prometheus:$micrometerVersion")
@@ -69,6 +72,7 @@ subprojects {
 	dependencies {
 		// spring
 		implementation("org.springframework.boot:spring-boot-starter-actuator")
+		implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 
 		// kotlin
 		implementation("org.jetbrains.kotlin:kotlin-reflect")
@@ -79,6 +83,10 @@ subprojects {
 
 		// spring
 		implementation("org.springframework.boot:spring-boot-starter-web")
+
+		// db
+		implementation("org.postgresql:postgresql")
+		implementation("org.flywaydb:flyway-core")
 
 		//dod
 		implementation("io.micrometer:micrometer-registry-prometheus")

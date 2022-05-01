@@ -1,11 +1,16 @@
 #Server Properties
 server:
-  port: 8080
+  port: 8083
 
 #Spring Properties
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
 
 #Prometheus
 management:

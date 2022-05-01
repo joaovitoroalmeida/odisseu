@@ -72,7 +72,6 @@ subprojects {
 	dependencies {
 		// spring
 		implementation("org.springframework.boot:spring-boot-starter-actuator")
-		implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 
 		// kotlin
 		implementation("org.jetbrains.kotlin:kotlin-reflect")
@@ -83,10 +82,6 @@ subprojects {
 
 		// spring
 		implementation("org.springframework.boot:spring-boot-starter-web")
-
-		// db
-		implementation("org.postgresql:postgresql")
-		implementation("org.flywaydb:flyway-core")
 
 		//dod
 		implementation("io.micrometer:micrometer-registry-prometheus")

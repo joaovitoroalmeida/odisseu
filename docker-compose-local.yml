@@ -19,4 +19,4 @@ services:
       POSTGRES_USER: helpcar-customer-local
       POSTGRES_PASSWORD: helpcar-customer-local
     ports:
-      - "5436:5436"
+      - "5432:5432"

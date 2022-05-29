@@ -20,9 +20,9 @@ class FlywayConfiguration(
                         .baselineVersion(environment.getRequiredProperty("spring.flyway.baseline-version"))
                         .schemas(environment.getRequiredProperty("spring.flyway.schemas"))
                         .dataSource(
-                                environment.getRequiredProperty("spring.flyway.url"),
-                                environment.getRequiredProperty("spring.flyway.user"),
-                                environment.getRequiredProperty("spring.flyway.password")
+                            environment.getRequiredProperty("spring.flyway.url"),
+                            environment.getRequiredProperty("spring.flyway.user"),
+                            environment.getRequiredProperty("spring.flyway.password")
                         )
         )
     }

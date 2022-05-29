@@ -11,7 +11,9 @@ services:
     ports:
       - "8080:8080"
     environment:
-      SPRING_PROFILES_ACTIVE: local
+      SPRING_PROFILES_ACTIVE: local-docker
+      DB_USER: helpcar-customer-local
+      DB_PASSWORD: helpcar-customer-local
 
   db:
     image: postgres

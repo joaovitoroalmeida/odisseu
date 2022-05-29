@@ -1,4 +1,4 @@
-package helpcar.customer.controller
+package helpcar.webservice.controller
 
 import helpcar.api.request.CustomerRequest
 import helpcar.api.response.CustomerResponse

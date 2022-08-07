@@ -1,3 +1,3 @@
 dependencies {
-    implementation(project(":helpcar-customer-api"))
+    implementation(project(":odisseu-api"))
 }

@@ -3,9 +3,9 @@ plugins {
 }
 
 dependencies {
-    implementation(project(":helpcar-customer-api"))
-    implementation(project(":helpcar-customer-dataprovider"))
-    implementation(project(":helpcar-customer-usecase"))
+    implementation(project(":odisseu-api"))
+    implementation(project(":odisseu-dataprovider"))
+    implementation(project(":odisseu-usecase"))
 }
 
 springBoot {

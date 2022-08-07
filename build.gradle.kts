@@ -22,7 +22,7 @@ plugins {
 
 allprojects {
 	version = projectVersion
-	group = "com.helpcar.customer.api"
+	group = "com.odisseu"
 
 	repositories {
 		mavenCentral()

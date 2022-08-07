@@ -3,8 +3,8 @@ plugins {
 }
 
 dependencies {
-    implementation(project(":helpcar-customer-api"))
-    implementation(project(":helpcar-customer-usecase"))
+    implementation(project(":odisseu-api"))
+    implementation(project(":odisseu-usecase"))
 
     //spring
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")

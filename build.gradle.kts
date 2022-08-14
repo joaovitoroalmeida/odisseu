@@ -48,7 +48,7 @@ subprojects {
 		dependencies {
 			// spring
 			dependency("org.springframework.boot:spring-boot-starter-actuator:$springBootStarterVersion")
-			dependency("org.springframework.boot:spring-boot-starter-data-jpa:$springBootStarterVersion")
+//			dependency("org.springframework.boot:spring-boot-starter-data-jpa:$springBootStarterVersion")
 
 			// kotlin
 			dependency("org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion")

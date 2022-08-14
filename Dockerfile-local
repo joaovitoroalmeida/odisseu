@@ -1,9 +1,0 @@
-FROM openjdk:11-jre-slim-sid
-
-RUN mkdir /helpcar-customer
-
-WORKDIR /helpcar-customer
-
-COPY webservice/build/libs/helpcar-customer-webservice-1.0.0.jar /helpcar-customer/helpcar-customer.jar
-
-ENTRYPOINT java -jar helpcar-customer.jar

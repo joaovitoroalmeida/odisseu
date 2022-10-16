@@ -1,7 +1,7 @@
 package odisseu.api.domain
 
 import java.math.BigDecimal
-import java.util.*
+import java.util.Date
 import odisseu.api.common.enum.FrequencyType
 
 data class ExpenseDomain(

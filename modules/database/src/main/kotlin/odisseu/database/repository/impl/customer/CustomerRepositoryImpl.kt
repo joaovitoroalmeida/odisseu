@@ -2,7 +2,7 @@ package odisseu.database.repository.impl.customer
 
 import java.time.LocalDateTime
 import java.time.ZoneId
-import java.util.*
+import java.util.UUID
 import odisseu.api.entity.CustomerEntity
 import odisseu.database.repository.impl.customer.sql.CustomerQuery
 import odisseu.dataprovider.repository.CustomerRepository

@@ -1,6 +1,6 @@
 package odisseu.api.extension.domainToEntity
 
-import java.util.*
+import java.util.UUID
 import odisseu.api.domain.ExpenseDomain
 import odisseu.api.entity.ExpenseEntity
 

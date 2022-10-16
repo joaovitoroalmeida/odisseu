@@ -1,7 +1,7 @@
 package odisseu.api.entity
 
 import java.math.BigDecimal
-import java.util.*
+import java.util.Date
 
 data class ExpenseEntity(
         val id: String,

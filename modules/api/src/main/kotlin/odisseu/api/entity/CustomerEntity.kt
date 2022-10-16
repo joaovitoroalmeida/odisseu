@@ -1,7 +1,7 @@
 package odisseu.api.entity
 
 import java.time.Instant
-import java.util.*
+import java.util.UUID
 
 data class CustomerEntity(
         val id: String? = UUID.randomUUID().toString(),

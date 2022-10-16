@@ -20,15 +20,15 @@ jobs:
         run: ./gradlew clean build
       - name: Run all tests
         run: ./gradlew test
-      - name: Login to Heroku Container Registry
-        env:
-          HEROKU_API_KEY: ${{secrets.HEROKU_API_KEY}}
-        run: heroku container:login
-      - name: Build and Push
-        env:
-          HEROKU_API_KEY: ${{secrets.HEROKU_API_KEY}}
-        run: heroku container:push -a ${{secrets.HEROKU_APP_NAME}} web
-      - name: Release
-        env:
-          HEROKU_API_KEY: ${{secrets.HEROKU_API_KEY}}
-        run: heroku container:release -a ${{secrets.HEROKU_APP_NAME}} web
+#      - name: Login to Heroku Container Registry
+#        env:
+#          HEROKU_API_KEY: ${{secrets.HEROKU_API_KEY}}
+#        run: heroku container:login
+#      - name: Build and Push
+#        env:
+#          HEROKU_API_KEY: ${{secrets.HEROKU_API_KEY}}
+#        run: heroku container:push -a ${{secrets.HEROKU_APP_NAME}} web
+#      - name: Release
+#        env:
+#          HEROKU_API_KEY: ${{secrets.HEROKU_API_KEY}}
+#        run: heroku container:release -a ${{secrets.HEROKU_APP_NAME}} web

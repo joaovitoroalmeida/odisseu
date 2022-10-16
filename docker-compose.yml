@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  postgres:
+    container_name: postgres_container
+    image: postgres
+    environment:
+      POSTGRES_USER: odisseu
+      POSTGRES_PASSWORD: lK4gXd2t3rs0
+      POSTGRES_DB: odisseudb
+    ports:
+      - "5432:5432"

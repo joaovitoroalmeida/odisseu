@@ -1,0 +1,13 @@
+#Spring Properties
+spring:
+  datasource:
+    url: jdbc:postgresql://1270.0.0.1:5432/odisseudb?schema=odisseu
+    username: ${POSTGRES_USER}
+    password: ${POSTGRES_PASSWORD}
+  flyway:
+    enabled: true
+    url: jdbc:postgresql://127.0.0.1:5432/odisseudb
+    user: ${spring.datasource.username}
+    password: ${spring.datasource.password}
+    baseline-on-migrate: true
+    baseline-version: 1

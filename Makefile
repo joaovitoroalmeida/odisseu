@@ -3,10 +3,10 @@ GRADLE = ./gradlew
 
 # Start app
 start:
-	$(COMPOSE_FILE) docker-compose-local.yml up
+	$(COMPOSE_FILE) docker-compose.yml up
 
 stop:
-	$(COMPOSE_FILE) docker-compose-local.yml down
+	$(COMPOSE_FILE) docker-compose.yml down
 
 gradle.build:
 	$(GRADLE) clean build

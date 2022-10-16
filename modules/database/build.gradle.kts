@@ -1,13 +1,12 @@
 plugins {
-    id("org.flywaydb.flyway") version "6.4.2"
+    id("org.flywaydb.flyway") version "8.5.10"
 }
 
 dependencies {
     implementation(project(":odisseu-api"))
     implementation(project(":odisseu-dataprovider"))
 
-    //spring
-//    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+    implementation("org.springframework:spring-jdbc")
 
     // db
     implementation("org.flywaydb:flyway-core")

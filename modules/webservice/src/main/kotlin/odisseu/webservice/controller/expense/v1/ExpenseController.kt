@@ -1,4 +1,4 @@
-package odisseu.webservice.controller.v1
+package odisseu.webservice.controller.expense.v1
 
 import odisseu.api.domain.ExpenseDomain
 import odisseu.api.extension.domainToResponse.toResponse

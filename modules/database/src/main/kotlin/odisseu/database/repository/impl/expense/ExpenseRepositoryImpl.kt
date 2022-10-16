@@ -1,4 +1,4 @@
-package odisseu.database.repository.impl
+package odisseu.database.repository.impl.expense
 
 import odisseu.api.entity.ExpenseEntity
 import odisseu.dataprovider.repository.ExpenseRepository

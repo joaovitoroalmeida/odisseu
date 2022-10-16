@@ -1,8 +1,8 @@
 package odisseu.api.request
 
-import odisseu.api.common.enum.FrequencyType
 import java.math.BigDecimal
-import java.util.Date
+import java.util.*
+import odisseu.api.common.enum.FrequencyType
 
 data class ExpenseRequest(
         val expenseValue: BigDecimal,

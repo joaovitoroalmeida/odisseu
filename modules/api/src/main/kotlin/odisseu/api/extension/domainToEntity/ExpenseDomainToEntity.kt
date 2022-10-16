@@ -1,8 +1,8 @@
 package odisseu.api.extension.domainToEntity
 
+import java.util.*
 import odisseu.api.domain.ExpenseDomain
 import odisseu.api.entity.ExpenseEntity
-import java.util.UUID
 
 fun ExpenseDomain.toEntity() =
         ExpenseEntity(

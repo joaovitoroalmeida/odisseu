@@ -1,9 +1,9 @@
 FROM openjdk:11-jre-slim
 
-RUN mkdir /helpcar-customer-prod
+RUN mkdir /odisseu-production
 
-WORKDIR /helpcar-customer
+WORKDIR /odisseu
 
-COPY webservice/build/libs/helpcar-customer-webservice-1.0.0.jar /helpcar-customer/helpcar-customer.jar
+COPY /modules/webservice/build/libs/odissey-webservice-*.jar /odisseu/odisseu.jar
 
-CMD java -Dserver.port=$PORT -Dspring.profiles.active=dev -jar helpcar-customer.jar
+CMD java -Dserver.port=$PORT -Dspring.profiles.active=production -jar odisseu.jar
